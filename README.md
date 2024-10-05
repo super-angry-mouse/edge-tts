@@ -18,8 +18,8 @@ public final class TtsExample {
         // Compose everything into TTS settings
         TtsSettings ttsSettings = new TtsSettings(text, outputFormat, voice, prosodySettings);
 
-        EdgeTtsClient client = new EdgeTtsClient(); // Instantiate the TTS client.
-        client.saveToFile(path, ttsSettings).join(); // Save the TTS data to the output path.
+        EdgeTtsClient client = new EdgeTtsClient(); // Instantiate the TTS client
+        client.saveToFile(path, ttsSettings).join(); // Save the TTS data to the output path
     }
 }
 ```
