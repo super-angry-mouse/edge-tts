@@ -15,8 +15,8 @@ import java.util.concurrent.CompletableFuture;
 public final class EdgeTtsClient {
     private static final String TRUSTED_CLIENT_TOKEN = "6A5AA1D4EAFF4E9FB37E23D68491D6F4";
     private static final URI SYNTHESIZE_URI = URI.create(
-            "wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken="
-                    + TRUSTED_CLIENT_TOKEN
+            "wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=" +
+                    TRUSTED_CLIENT_TOKEN
     );
 
     /**
