@@ -66,7 +66,7 @@ public final class EdgeTtsClient {
             if (success) {
                 future.complete(outputStream.toByteArray());
             } else {
-                future.obtrudeException(new RuntimeException("failed to load byte data"));
+                future.completeExceptionally(new RuntimeException("failed to load byte data"));
             }
         });
         edgeTtsWebSocket.connect();

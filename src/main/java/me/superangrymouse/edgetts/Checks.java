@@ -11,9 +11,11 @@ public final class Checks {
      * @param arg Check if this argument is null.
      * @param argName The argument's name.
      */
-    public static void notNullArg(Object arg, String argName) {
+    public static <T> T notNullArg(T arg, String argName) {
         if (arg == null) {
             throw new IllegalArgumentException(argName + " is null");
+        } else {
+            return arg;
         }
     }
 

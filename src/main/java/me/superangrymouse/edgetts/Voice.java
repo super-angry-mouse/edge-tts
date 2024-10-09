@@ -36,15 +36,10 @@ public final class Voice {
             @NotNull String gender,
             @NotNull String locale
     ) {
-        Checks.notNullArg(name, "name");
-        Checks.notNullArg(displayName, "displayName");
-        Checks.notNullArg(gender, "gender");
-        Checks.notNullArg(locale, "locale");
-
-        this.name = name;
-        this.displayName = displayName;
-        this.gender = gender;
-        this.locale = locale;
+        this.name = Checks.notNullArg(name, "name");
+        this.displayName = Checks.notNullArg(displayName, "displayName");
+        this.gender = Checks.notNullArg(gender, "gender");
+        this.locale = Checks.notNullArg(locale, "locale");
     }
 
     /**

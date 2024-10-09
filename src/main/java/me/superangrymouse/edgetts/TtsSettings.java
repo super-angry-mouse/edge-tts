@@ -25,15 +25,10 @@ public final class TtsSettings {
             @NotNull Voice voice,
             @NotNull ProsodySettings prosodySettings
     ) {
-        Checks.notNullArg(text, "text");
-        Checks.notNullArg(format, "format");
-        Checks.notNullArg(voice, "voice");
-        Checks.notNullArg(prosodySettings, "prosodySetting");
-
-        this.text = text;
-        this.format = format;
-        this.voice = voice;
-        this.prosodySettings = prosodySettings;
+        this.text = Checks.notNullArg(text, "text");
+        this.format = Checks.notNullArg(format, "format");
+        this.voice = Checks.notNullArg(voice, "voice");
+        this.prosodySettings = Checks.notNullArg(prosodySettings, "prosodySetting");
     }
 
     /**

@@ -36,12 +36,8 @@ public final class EdgeTtsWebSocket extends WebSocketClient {
             @NotNull OutputStream outputStream
     ) {
         super(webSocketUri);
-
-        Checks.notNullArg(ttsSettings, "ttsSettings");
-        Checks.notNullArg(outputStream, "outputStream");
-
-        this.ttsSettings = ttsSettings;
-        this.outputStream = outputStream;
+        this.ttsSettings = Checks.notNullArg(ttsSettings, "ttsSettings");
+        this.outputStream = Checks.notNullArg(outputStream, "outputStream");
         this.onFinishListeners = new ArrayList<>();
     }
 
@@ -158,7 +154,6 @@ public final class EdgeTtsWebSocket extends WebSocketClient {
      */
     public void registerFinishListener(@NotNull Consumer<@NotNull Boolean> listener) {
         Checks.notNullArg(listener, "listener");
-
         this.onFinishListeners.add(listener);
     }
 }
